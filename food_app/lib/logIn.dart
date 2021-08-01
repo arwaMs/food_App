@@ -87,7 +87,7 @@ class _LogInState extends State<LogIn> {
                                   style: TextStyle(
                                       fontSize: 13,
                                       fontWeight: FontWeight.bold,
-                                      color: Color(0xff5200ef)),
+                                      color: Colors.deepOrange[900]),
                                 ),
                               ),
                             ),
@@ -184,7 +184,7 @@ class _LogInState extends State<LogIn> {
                           height: 30,
                           decoration: BoxDecoration(
                             borderRadius: BorderRadius.circular(50),
-                            color: Color(0xff283190),
+                            color: Colors.deepOrange[900],
                           ),
                           child: Text(
                             "تسجيل الدخول",
@@ -224,7 +224,7 @@ class _LogInState extends State<LogIn> {
                             style: TextStyle(
                                 fontSize: 16,
                                 fontWeight: FontWeight.bold,
-                                color: Color(0xff5200ef)),
+                                color: Colors.deepOrange[900]),
                           ),
                         ),
                       ),
