@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:food_app/McDonalds.dart';
 import 'package:food_app/logIn.dart';
 
 
@@ -12,7 +13,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'FoodStation',
       debugShowCheckedModeBanner: false,
-      home: LogIn(),
+      home: McD(),
     );
   }
 }

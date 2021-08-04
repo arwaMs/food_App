@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:food_app/McDonalds.dart';
 
 class HomePage extends StatefulWidget {
   @override
@@ -127,52 +128,63 @@ class _HomePageState extends State<HomePage> {
                 SizedBox(
                   height: 20,
                 ),
-                Container(
-                  height: 120,
-                  width: 370,
-                  color: Colors.grey[100],
-                  child: Column(
-                    children: [
-                      Row(
-                        children: [
-                          SizedBox(
-                            width: 10,
-                          ),
-                          Container(
-                            height: 120,
-                            width: 110,
-                            child: Image.network(
-                                "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4b/McDonald%27s_logo.svg/2560px-McDonald%27s_logo.svg.png"),
-                          ),
-                          SizedBox(
-                            width: 20,
-                          ),
-                          Column(
-                            children: [
-                              // SizedBox(height: 1,),
-                              Text(
-                                "McDonald's",
-                                style: TextStyle(
-                                    fontSize: 20, fontWeight: FontWeight.bold),
-                              ),
-                              SizedBox(height: 15,),
-                              Row(
-                                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                                children: [
-                                  Icon(Icons.star,color: Colors.black54,),
-                                  Icon(Icons.star,color: Colors.black54,),
-                                  Icon(Icons.star,color: Colors.black54),
-                                  Icon(Icons.star,color: Colors.black54,),
-                                  Icon(Icons.star_half,color: Colors.black54,),
-
-
-                                ],
-                              )
-                            ],
-                          ),
-                        ],
+                GestureDetector(
+                  onTap: (){
+                    Navigator.of(context).push(
+                      MaterialPageRoute(
+                        builder: (BuildContext newContext) {
+                          return McD();
+                        },
                       ),
-                    ],
+                    );
+                  },
+                  child: Container(
+                    height: 120,
+                    width: 370,
+                    color: Colors.grey[100],
+                    child: Column(
+                      children: [
+                        Row(
+                          children: [
+                            SizedBox(
+                              width: 10,
+                            ),
+                            Container(
+                              height: 120,
+                              width: 110,
+                              child: Image.network(
+                                  "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4b/McDonald%27s_logo.svg/2560px-McDonald%27s_logo.svg.png"),
+                            ),
+                            SizedBox(
+                              width: 20,
+                            ),
+                            Column(
+                              children: [
+                                // SizedBox(height: 1,),
+                                Text(
+                                  "McDonald's",
+                                  style: TextStyle(
+                                      fontSize: 20, fontWeight: FontWeight.bold),
+                                ),
+                                SizedBox(height: 15,),
+                                Row(
+                                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                                  children: [
+                                    Icon(Icons.star,color: Colors.black54,),
+                                    Icon(Icons.star,color: Colors.black54,),
+                                    Icon(Icons.star,color: Colors.black54),
+                                    Icon(Icons.star,color: Colors.black54,),
+                                    Icon(Icons.star_half,color: Colors.black54,),
+
+
+                                  ],
+                                )
+                              ],
+                            ),
+                          ],
+                        ),
+                      ],
+                    ),
                   ),
                 ),
                 SizedBox(
@@ -294,7 +306,7 @@ class AdsSlideCards extends StatelessWidget {
         elevation: 15,
         shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(10)),
         child: Container(
-          height: 180,
+          height: 190,
           child: ClipRRect(
             borderRadius: BorderRadius.circular(10),
             child: Image(
